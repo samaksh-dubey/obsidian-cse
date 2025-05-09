@@ -1,0 +1,4 @@
+.obsidian/plugins/github-sync/data.json // this is enough but you can also add the bellow or use pattern
+.obsidian/plugins/github-sync/main.js
+.obsidian/plugins/github-sync/manifest.json
+.obsidian/plugins/github-sync/styles.css
