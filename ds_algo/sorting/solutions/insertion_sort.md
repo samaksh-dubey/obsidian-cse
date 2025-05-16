@@ -6,22 +6,21 @@ Logic:
 Code:
 ```java
 sort(int[] arr, int leng) {
-	for (int unsorted = 0; unsorted < len; unsorted++) {
-		
-		// hold first element of unsorted array
-		int val = arr[unsorted];
-
-		// initialize the last index of sorted array
-		int indexToInsert = unsorted - 1;
-		
-		// shift elements in sorted array till element is greater than first element of unsorted array.
-		while(indexToInsert >= 0 && arr[indexToInsert] > val) {
-			arr[indexToInsert + 1] = arr[indexToInsert];
-			indexToInsert--;
-		}
-
-		// put val of first element of unsorted array in the indexToInset
-		arr[indexToInsert] = val;
-	}
+  for (int unsorted = 0; unsorted < len; unsorted++) {
+    // hold first element of unsorted array
+    int val = arr[unsorted];
+    
+    // initialize the last index of sorted array
+    int indexToInsert = unsorted - 1;
+    
+    // shift elements in sorted array till element is greater than first element of unsorted array.
+    while(indexToInsert >= 0 && arr[indexToInsert] > val) {
+      arr[indexToInsert + 1] = arr[indexToInsert];
+      indexToInsert--;
+    }
+    
+    // put val of first element of unsorted array in the indexToInset
+    arr[indexToInsert] = val;
+  }
 }
 ```

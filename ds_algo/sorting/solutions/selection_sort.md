@@ -3,7 +3,7 @@
 3. Swap first element with smallest element in unsorted array
 4. Increment unsorted array
 
-```
+```java
 sort(int arr, int length) {
 
 }
