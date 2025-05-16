@@ -1,4 +1,4 @@
-1. [Sorting](Sorting/Topics.md)
+1. [Sorting](sorting/topics.md)
 2. Searching
 3. Linked List
 4. Stacks

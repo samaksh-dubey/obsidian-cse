@@ -4,7 +4,7 @@ Logic:
 3. Increment unsorted pointer
 
 Code:
-```
+```java
 sort(int[] arr, int leng) {
 	for (int unsorted = 0; unsorted < len; unsorted++) {
 		
