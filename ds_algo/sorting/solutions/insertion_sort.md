@@ -3,24 +3,35 @@ Logic:
 2. Take first element of unsorted part and insert it into the right position in sorted part (This happens inside a nested loop and right after this loop)
 3. Increment unsorted pointer
 
-Code:
+Piecewise Code:
 ```java
-sort(int[] arr, int leng) {
-  for (int unsorted = 0; unsorted < len; unsorted++) {
-    // hold first element of unsorted array
-    int val = arr[unsorted];
-    
-    // initialize the last index of sorted array
-    int indexToInsert = unsorted - 1;
-    
-    // shift elements in sorted array till element is greater than first element of unsorted array.
-    while(indexToInsert >= 0 && arr[indexToInsert] > val) {
-      arr[indexToInsert + 1] = arr[indexToInsert];
-      indexToInsert--;
+  static void sort(int[] arr, int len) {
+    for (int unsorted = 1; unsorted < len; unsorted++) {
+      int val = arr[unsorted];
+      int index = findIndexInSortedArray(arr, val, 0, unsorted);
+		  shiftRight(arr, index, unsorted);
+		  arr[index] = val;
     }
-    
-    // put val of first element of unsorted array in the indexToInset
-    arr[indexToInsert] = val;
   }
-}
+
+  static int findIndexInSortedArray(int[] arr, int val, int left, int right) {
+    int found = right;
+    while (right > left && arr[right-1] > val) {
+      found = right - 1;
+      right--;
+    }
+    return found;
+  }
+
+  static void shiftRight(int[] arr, int left, int right) {
+    while (right > left) {
+      arr[right] = arr[right-1];
+      right--;
+    }
+  }
+```
+
+Unified Code:
+```java
+  
 ```
