@@ -14,15 +14,13 @@ sort(int[] arr, int leng) {
 		// initialize the last index of sorted array
 		int indexToInsert = unsorted - 1;
 		
-		// shift elements in sorted array till element is greater than
-		// first element of unsorted array.
+		// shift elements in sorted array till element is greater than first element of unsorted array.
 		while(indexToInsert >= 0 && arr[indexToInsert] > val) {
 			arr[indexToInsert + 1] = arr[indexToInsert];
 			indexToInsert--;
 		}
 
-		// put val of first element of unsorted array in the
-		// indexToInset
+		// put val of first element of unsorted array in the indexToInset
 		arr[indexToInsert] = val;
 	}
 }
