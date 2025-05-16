@@ -1,4 +1,4 @@
-1. Sorting
+1. [[Topics|Sorting]]
 2. Searching
 3. Linked List
 4. Stacks
