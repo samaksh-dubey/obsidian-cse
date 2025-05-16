@@ -7,9 +7,15 @@ Code:
 ```
 sort(int[] array, int length) {
 	for (int unsorted = 0; unsorted < length; unsorted++) {
+		
+		// Hold first element of unsorted array
 		int val = array[unsorted];
+
+		// initialize the last index of sorted array
 		int current = unsorted - 1;
 		
+		// Shift elements in sorted array till element is greater than
+		// first element of unsorted array.
 		while(current >= 0 && array[current] > val) {
 			array[current + 1] = array[current];
 			current--;
