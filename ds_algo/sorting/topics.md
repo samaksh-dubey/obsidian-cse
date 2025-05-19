@@ -1,7 +1,12 @@
-1. [Insertion Sort](solutions/insertion_sort.md)
-2. [Selection Sort](solutions/selection_sort.md)
-3. [Bubble Sort](solutions/bubble_sort.md)
-4. Merge Sort ([recurrsive](solutions/merge_sort.md) | iterative)
-5. Quick Sort ([lomuto](solutions/quick_sort_lomuto.md) | [hoare](solutions/quick_sort_hoare.md))
-6. Count Sort
-7. Radix Sort
+1. [insertion sort](solutions/insertion_sort.md)
+2. [selection sort](solutions/selection_sort.md)
+3. [bubble sort](solutions/bubble_sort.md)
+4. merge sort ([recurrsive](solutions/merge_sort.md) | iterative)
+5. quick sort ([lomuto](solutions/quick_sort_lomuto.md) | [hoare](solutions/quick_sort_hoare.md))
+6. [count sort](solutions/count_sort.md)
+7. radix sort
+
+Problems:
+1. inversion count
+2. surpasser count
+3. segregate positive and negative number
