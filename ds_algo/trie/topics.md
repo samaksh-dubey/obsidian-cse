@@ -1,0 +1,1 @@
+1. [trie implementation](solutions/trie_impl.md)
