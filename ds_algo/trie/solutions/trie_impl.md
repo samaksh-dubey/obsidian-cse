@@ -31,20 +31,9 @@ class Trie {
   }
 
   void delete(String word) {
-    Stack<Node> stack = new Stack<>();
+    char[] characters = word.toCharArray();
+    Stack<Node> stack = buildDeletionStack(characters);
     
-    Node current = root;
-    stack.push(current);
-
-    for (char c: word.toCharArray()) {
-      Node node = current.peek();
-      
-      if(node.children.get(c) == null)
-        return false;
-
-      stack.push(node.children.get(c)); 
-    }
-
     Node node = stack.pop();
 
     boolean shouldDelete = false;
@@ -58,13 +47,27 @@ class Trie {
     int i = stack.size() - 1;
     while(!stack.isEmpty() && shouldDelete) {
       node = stack.pop();
-      char ch = word.chatAt(i);
-      shouldDelete = !node.isLeaf;
-      if (shouldDelete) {
-        node.children.remove(ch);
-        shouldDelete = node.children.isEmpty();
-      }
+      char ch = characters[i--];
+
+      node.children.remove(ch);
+      shouldDelete = !node.isLeaf && node.children.isEmpty();
     }
+  }
+
+  private Stack<Node> buildDeletionStack(char[] characters) {
+    Stack<Node> stack = new Stack<>();
+    Node current = root;
+    stack.push(current);
+
+    for (char c: characters) {
+      Node node = current.peek();
+      
+      if(node.children.get(c) == null)
+        return false;
+
+      stack.push(node.children.get(c)); 
+    }
+    return stack;
   }
 }
 ```
